@@ -7,5 +7,12 @@ class Transfer
     @amount = amount
     @transfer = "pending"
   end
-  
+
+  def valid?
+    if  
+     
+    else
+
+    end    
+  end  
 end
