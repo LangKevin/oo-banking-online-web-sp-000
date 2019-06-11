@@ -10,9 +10,9 @@ class Transfer
 
   def valid?
     if  
-     
+
     else
 
-    end    
-  end  
+    end
+  end
 end
