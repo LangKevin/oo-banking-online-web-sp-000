@@ -31,6 +31,6 @@ class Transfer
     self.receiver.withdraw(self.amount)
     self.sender.deposit(self.amount)
     self.transfer = "complete"
-  end  
+  end
 
 end
