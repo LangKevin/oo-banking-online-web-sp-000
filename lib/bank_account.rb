@@ -6,5 +6,5 @@ class BankAccount
     @status = "open"
     @balance = 1000
   end
-  
+
 end
