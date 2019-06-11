@@ -20,11 +20,17 @@ class Transfer
     if self.transfer = "pending"
       if self.sender.valid?
         self.sender.withdraw(self.amount)
-        self.sender.deposit(self.amount)
+        self.receiver.deposit(self.amount)
         self.transfer = "complete"
       else
         "Transaction rejected. Please check your account balance."
     end
   end
+
+  def reverse_transfer
+    self.receiver.withdraw(self.amount)
+    self.sender.deposit(self.amount)
+    self.transfer = "complete"
+  end  
 
 end
