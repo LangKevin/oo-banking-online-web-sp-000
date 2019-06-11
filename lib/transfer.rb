@@ -17,7 +17,7 @@ class Transfer
   end
 
   def execute_transaction
-    if self.status = "pending"
+    if self.status == "pending"
       if self.sender.valid?
         # let(:avi) { BankAccount.new("Avi") }
         # let(:amanda) { BankAccount.new("Amanda") }
@@ -32,7 +32,7 @@ class Transfer
   end
 
   def reverse_transfer
-    if self.status = "complete"
+    if self.status == "complete"
       self.receiver.withdraw(self.amount)
       self.sender.deposit(self.amount)
       self.status = "reversed"
