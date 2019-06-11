@@ -28,9 +28,11 @@ class Transfer
   end
 
   def reverse_transfer
-    self.receiver.withdraw(self.amount)
-    self.sender.deposit(self.amount)
-    self.transfer = "reversed"
+    if self.transfer = "complete"
+      self.receiver.withdraw(self.amount)
+      self.sender.deposit(self.amount)
+      self.transfer = "reversed"
+    end
   end
 
 end
