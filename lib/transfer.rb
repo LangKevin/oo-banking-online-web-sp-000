@@ -12,7 +12,7 @@ class Transfer
     if sender.valid? || recevier.valid?
       return true
     else
-      return false 
+      return false
     end
   end
 
