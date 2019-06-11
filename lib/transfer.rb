@@ -20,13 +20,13 @@ class Transfer
     if !self.sender.valid?
       "Transaction rejected. Please check your account balance."
     elsif self.status == "pending"
-      if self.sender.valid?
+      # if self.sender.valid?
         self.sender.withdraw(self.amount)
         self.receiver.deposit(self.amount)
         self.status = "complete"
-      else
-        "Transaction rejected. Please check your account balance."
-      end
+      # else
+        # "Transaction rejected. Please check your account balance."
+      # end
     end
   end
 
