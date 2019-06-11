@@ -17,11 +17,10 @@ class Transfer
   end
 
   def execute_transaction
-    if self.status == "pending"
+    if !self.sender.valid?
+      "Transaction rejected. Please check your account balance." 
+    elsif self.status == "pending"
       if self.sender.valid?
-        # let(:avi) { BankAccount.new("Avi") }
-        # let(:amanda) { BankAccount.new("Amanda") }
-        # let(:transfer) { Transfer.new(amanda, avi, 50) }
         self.sender.withdraw(self.amount)
         self.receiver.deposit(self.amount)
         self.status = "complete"
