@@ -17,5 +17,8 @@ class Transfer
   end
 
   def execute_transaction
+    self.sender.withdraw(self.amount)  
+    self.sender.deposit(self.amount)
+    self.transfer = "complete"
   end  
 end
