@@ -8,8 +8,8 @@ class BankAccount
   end
   def deposit(amount)
     @balance += 1000
-  end  
+  end
   def display_balance
     "Your balance is $#{self.balance}."
-  end  
+  end
 end
